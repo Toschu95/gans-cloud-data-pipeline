@@ -15,17 +15,19 @@ with open("config.json", "r") as f:
     
 @functions_framework.http
 def add_dynamic_data(request):
-    logging.info("Start der Funktion")
+    logging.info("Function execution started.")
 
     try:
+        # Load weather data into SQL
         load_weather_info_to_sql(db_config, api_config)
-        logging.info("Wetterdaten geladen")
-        
+        logging.info("Weather data successfully loaded.")
+
+        # Load flight data into SQL
         load_flight_info_to_sql(db_config, api_config)
-        logging.info("Flugdaten geladen")
+        logging.info("Flight data successfully loaded.")
 
         return "Success", 200
 
     except Exception as e:
-        logging.exception("Fehler beim Ausführen der Funktion:")
-        return f"Fehler: {str(e)}", 500
+        logging.exception("An error occurred during function execution:")
+        return f"Error: {str(e)}", 500

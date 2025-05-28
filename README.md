@@ -91,4 +91,4 @@ Copy and rename `config_template.json` → `config.json`, then add your credenti
 
 ---
 
-Built during the WBS Data Science Bootcamp (2025)
+Built during the [WBS Data Science Bootcamp](https://www.wbscodingschool.com/) (2025)

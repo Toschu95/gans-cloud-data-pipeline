@@ -1,0 +1,10 @@
+# Ignore temporary/system files
+*~*
+.DS_Store
+__pycache__
+
+# Ignore config file(s)
+config.json
+
+# Ignore checkpoint files
+*checkpoint*

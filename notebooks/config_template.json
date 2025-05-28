@@ -1,0 +1,30 @@
+{
+    "db_config" :
+    {
+        "schema": "gans",
+        "host": "YOUR_CLOUD_SQL_IP",
+        "user": "root",
+        "password": "YOUR_PASSWORD",
+        "port": 3306,
+        "sql_geo_table": "geodata",
+        "sql_weather_table": "weathers",
+        "sql_airport_table": "airports",
+        "sql_airport_code_column": "airport_icao",
+        "sql_flight_table": "flights"
+    },
+    "api_config" :
+    {
+        "weather" :
+        {
+            "key" : "YOUR_WEATHER_API_KEY"
+        },
+        "flights" :
+        {
+        "host": "aerodatabox.p.rapidapi.com",
+        "key": "YOUR_FLIGHTS_API_KEY",
+        "decoding": "utf-8",
+        "code_type": "icao",
+        "delay": 2
+        }
+    }
+}
